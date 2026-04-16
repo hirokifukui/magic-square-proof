@@ -1,0 +1,65 @@
+% Lemma: k=3 base case for Theorem 7.5 (Non-square discriminant)
+% Generated and verified by verify_k3base.py
+
+\begin{lemma}\label{lem:k3base}
+For $k=3$, the $24$ all-one triples $($up to the ordering
+convention $\eps_a < \eps_b)$ yield exactly two equivalence classes
+of Gaussian elements $z_+ \in \Q(i)[t_1, t_3]$, under the equivalence
+$z_+ \sim u \cdot z_+({\pm t_1, t_3})$ for $u \in \{{\pm 1, \pm i}\}$.
+A representative of each class is
+\begin{align}
+  z_+ &= -(t_3 - i)^2\,(t_1^2 - 1)
+         \;+\; 2\bigl(i(t_3^2 - 1) - 6t_3\bigr)\,t_1,
+         \label{eq:zplus-class0} \\
+  z_+' &= \phantom{-}(t_3 + i)^2\,(t_1^2 - 1)
+         \;-\; 2\bigl(i(t_3^2 - 1) + 6t_3\bigr)\,t_1,
+         \label{eq:zplus-class1}
+\end{align}
+and $z_+'(t_1, t_3) = -\overline{z_+(-t_1, t_3)}$,
+where the bar denotes conjugation in~$\Q(i)/\Q$.
+Both $z_+$ and $z_+'$ are irreducible over~$\Q(i)$, and in particular
+neither is a Gaussian square.
+\end{lemma}
+
+\begin{proof}
+The enumeration of the $24$ triples and the reduction to two equivalence
+classes is a finite computation (verified in the accompanying script
+\texttt{verify\_k3base.py}).
+
+It suffices to prove that $z_+$ in~\eqref{eq:zplus-class0} is irreducible
+over~$\Q(i)$; the irreducibility of~$z_+'$ then follows since
+$z_+' = -\overline{z_+(-t_1, t_3)}$ and the map
+$f(t_1, t_3) \mapsto -\overline{f(-t_1, t_3)}$ is a ring automorphism
+of $\Q(i)[t_1, t_3]$.
+
+As a polynomial in~$t_1$, $z_+$ has degree~$2$ with coefficients
+in~$\Q(i)[t_3]$:
+\[
+  z_+ = a\,t_1^2 + b\,t_1 + c, \qquad
+  a = -(t_3 - i)^2, \quad
+  b = 2\bigl(i(t_3^2-1) - 6t_3\bigr), \quad
+  c = (t_3 - i)^2 = -a.
+\]
+The discriminant is
+\[
+  \Delta(t_3) \;=\; b^2 - 4ac \;=\; b^2 + 4a^2 \;=\; -64\,i\,t_3\,(t_3 + i)^2.
+\]
+Since $\deg_{t_3}(\Delta) = 3$ is odd, $\Delta(t_3)$ cannot be a perfect
+square in~$\Q(i)[t_3]$ (a square polynomial has even degree).
+Therefore $z_+$ is irreducible over~$\Q(i)(t_3)$, and a~fortiori
+over~$\Q(i)$ (by Gauss's lemma, an element of $\Q(i)[t_1, t_3]$ that is
+irreducible in $\Q(i)(t_3)[t_1]$ is irreducible in $\Q(i)[t_1, t_3]$,
+since $\Q(i)[t_3]$ is a UFD).
+
+In particular, $z_+$ is not a Gaussian square, so
+$D_1/16 = z_+\,\bar{z}_+$ is not a perfect square.
+\end{proof}
+
+\begin{remark}
+The resultant $\Res_{t_1}(z_+,\, \partial z_+/\partial t_1)
+= -64\,i\,t_3\,(t_3^2+1)^2$
+is a nonzero polynomial in~$t_3$, confirming that $z_+$ and
+$\partial z_+/\partial t_1$ are coprime in~$\Q(i)(t_3)[t_1]$
+and hence that $z_+$ is squarefree.
+The odd-degree discriminant argument is however more direct.
+\end{remark}
