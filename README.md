@@ -24,6 +24,7 @@ All scripts run in under one minute on standard hardware.
 | `verify_caseIV.py` | Degree argument for Case IV (non-complementary) | Proposition 5.5 |
 | `verify_k3_via_thm75.py` | All 168 k=3 triples are eliminated by Theorem 7.5 alone | §4.5 / §9 |
 | `generate_k3_table.py` | Generates the LaTeX table in Appendix D | Table 1 / Appendix D |
+| `verify_appendixA.py` | 8 line-sums reduce to 4 symmetric-pair identities | Remark A (Step 2) |
 
 ## Usage
 
