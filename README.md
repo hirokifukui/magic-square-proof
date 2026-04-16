@@ -1,3 +1,7 @@
+[![DOI (paper)](https://zenodo.org/badge/DOI/10.5281/zenodo.19601866.svg)](https://doi.org/10.5281/zenodo.19601866)
+[![DOI (code)](https://zenodo.org/badge/DOI/10.5281/zenodo.19601792.svg)](https://doi.org/10.5281/zenodo.19601792)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Verification Scripts for "Nonexistence of 3×3 Magic Squares of Squares"
 
 This repository contains the SymPy-based verification scripts accompanying the paper:
@@ -42,7 +46,37 @@ All scripts use `sympy` only (no external data or random seeds). Results are det
 
 ## Citation
 
-If you use these scripts, please cite the paper (BibTeX entry to be added upon publication).
+If you use these scripts, please cite both the paper and the code:
+
+**Paper:**
+> Fukui, H. (2026). *Nonexistence of 3×3 Magic Squares of Squares.* Zenodo. [https://doi.org/10.5281/zenodo.19601866](https://doi.org/10.5281/zenodo.19601866)
+
+**Code (this repository):**
+> Fukui, H. (2026). *hirokifukui/magic-square-proof: v1.0.0 — Initial release.* Zenodo. [https://doi.org/10.5281/zenodo.19601792](https://doi.org/10.5281/zenodo.19601792)
+
+### BibTeX
+
+```bibtex
+@misc{fukui2026magicsquares,
+  author       = {Fukui, Hiroki},
+  title        = {Nonexistence of 3{\texttimes}3 Magic Squares of Squares},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.19601866},
+  url          = {https://doi.org/10.5281/zenodo.19601866},
+  note         = {Preprint}
+}
+
+@software{fukui2026magicsquaresproof,
+  author       = {Fukui, Hiroki},
+  title        = {{hirokifukui/magic-square-proof: v1.0.0 --- Initial release}},
+  year         = {2026},
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.19601792},
+  url          = {https://doi.org/10.5281/zenodo.19601792}
+}
+```
 
 ## License
 
